@@ -1,0 +1,28 @@
+{
+    "drinks": [
+        {
+            "id": 1,
+            "bar": "The 13th Step",
+            "location": "Manhattan",
+            "strength": "medium",
+            "image": "https://s3-media0.fl.yelpcdn.com/bphoto/gT_i9cpnPkKxaTCfuv-RHg/o.jpg",
+            "comment": "order this: beer - 5 for 20"
+        },
+        {
+            "id": 1,
+            "bar": "Carmelo's",
+            "location": "Brooklyn",
+            "strength": "strong",
+            "image":"https://s3-media0.fl.yelpcdn.com/bphoto/c4-X6jHwXdP--k0UP7_2CA/o.jpg",
+            "comment": "order this: shots and beer - $4"
+        },
+        {
+            "id": 1,
+            "name": "Dominie's Hoek",
+            "location": "Queens",
+            "strength": "medium",
+            "image": "https://whereyoueat.com/r_gallery_images/rgallery-17278/0001-BG.jpg",
+            "comment":"order this: beer and shots specials"
+        }
+    ]
+}
