@@ -9,6 +9,30 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>The Lit Library</h1>
+    <div class="container">
+        <header>
+            <h1>The Lit Library</h1>
+        </header>
+        <div>
+            <form id="search-drinks" method="GET" action="/localhost:3000">
+                <label for="search-bar">I want to drink</label>
+                <input type="text" name="search bar" id="search-for-drinks" placeholder="drinks">
+                <label for="submit"></label>
+                <input type="submit" name="submit" id="submit-buttom">
+            </form>
+            <label for="select-borough">Filter Borough: </label>
+                <select id="borough-dropdown" name="select-borough">
+                    <option value="brooklyn">Brooklyn</option>
+                    <option value="bronx">Bronx</option>
+                    <option value="manhattan">Manhattan</option>
+                    <option value="queens">Queens</option>
+                    <option value="staten-island">Staten-Island</option>
+                </select>
+
+            <div class="result-container">
+                <p>our result will be here</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

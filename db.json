@@ -3,6 +3,7 @@
         {
             "id": 1,
             "bar": "The 13th Step",
+            "drink": "example drink 3",
             "location": "Manhattan",
             "strength": "medium",
             "image": "https://s3-media0.fl.yelpcdn.com/bphoto/gT_i9cpnPkKxaTCfuv-RHg/o.jpg",
@@ -11,6 +12,7 @@
         {
             "id": 1,
             "bar": "Carmelo's",
+            "drink": "example drink 2",
             "location": "Brooklyn",
             "strength": "strong",
             "image":"https://s3-media0.fl.yelpcdn.com/bphoto/c4-X6jHwXdP--k0UP7_2CA/o.jpg",
@@ -18,7 +20,8 @@
         },
         {
             "id": 1,
-            "name": "Dominie's Hoek",
+            "bar": "Dominie's Hoek",
+            "drink": "example drink",
             "location": "Queens",
             "strength": "medium",
             "image": "https://whereyoueat.com/r_gallery_images/rgallery-17278/0001-BG.jpg",
