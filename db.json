@@ -10,7 +10,7 @@
             "comment": "order this: beer - 5 for 20"
         },
         {
-            "id": 1,
+            "id": 2,
             "bar": "Carmelo's",
             "drink": "example drink 2",
             "location": "Brooklyn",
@@ -19,9 +19,36 @@
             "comment": "order this: shots and beer - $4"
         },
         {
-            "id": 1,
+            "id": 3,
             "bar": "Dominie's Hoek",
             "drink": "example drink",
+            "location": "Queens",
+            "strength": "medium",
+            "image": "https://whereyoueat.com/r_gallery_images/rgallery-17278/0001-BG.jpg",
+            "comment":"order this: beer and shots specials"
+        },
+        {
+            "id": 4,
+            "bar": "The new bar",
+            "drink": "example drink 2",
+            "location": "Manhattan",
+            "strength": "medium",
+            "image": "https://images.squarespace-cdn.com/content/v1/59acf2a1ff7c503cffe90bfb/1557414606790-ZDZLDIBRS4OPN6DL5112/pm_40826521763_o.jpg?format=1000w",
+            "comment": "order this: beer - 5 for 20"
+        },
+        {
+            "id": 5,
+            "bar": "Dominick's",
+            "drink": "example drink 2",
+            "location": "Brooklyn",
+            "strength": "strong",
+            "image":"https://www.worldsbestbars.com/wp-content/uploads/2020/04/no-cocktail-bar-tokyo-004.jpeg",
+            "comment": "order this: shots and beer - $4"
+        },
+        {
+            "id": 6,
+            "bar": "Leo's Hoek",
+            "drink": "example drink 3",
             "location": "Queens",
             "strength": "medium",
             "image": "https://whereyoueat.com/r_gallery_images/rgallery-17278/0001-BG.jpg",
