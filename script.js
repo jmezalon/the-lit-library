@@ -53,23 +53,20 @@ function renderOneDrinks(drinkObj) {
     inputBarForm.reset() 
 }
     
-    inputBarForm.addEventListener("submit", handleSearchSubmit)
-    // const userInput= inputBarForm.querySelector("#search-for-drinks").value
-    
-    function handleSearchSubmit(e) {
-        e.preventDefault()
-        const userInput= inputBarForm.querySelector("#search-for-drinks").value
 
-        fetch("http://localhost:3000/drinks")
-        .then(resp => resp.json())
-        .catch(err => console.log("err: ", err.message))
-        .then(drinks => {
-            searchResults.replaceChildren()
-            let filteredDrinks = drinks.filter(function (drinkObj) {                
-                return drinkObj.drink.toLowerCase() === userInput.toLowerCase()
-            })
-            console.log("filtered: ", filteredDrinks);
-            
-            filteredDrinks.length !== 0 ? filteredDrinks.map(renderOneDrinks) : renderNotFound()
-        })
-    }
+function handleSearchSubmit(e) {
+    e.preventDefault()
+    const userInput= inputBarForm.querySelector("#search-for-drinks").value
+    
+    fetch("http://localhost:3000/drinks")
+    .then(resp => resp.json())
+    .catch(err => console.log("err: ", err.message))
+    .then(drinks => {
+        searchResults.replaceChildren()
+        let filteredDrinks = drinks.filter(drinkObj => drinkObj.drink.toLowerCase() === userInput.toLowerCase())
+        
+        filteredDrinks.length !== 0 ? filteredDrinks.map(renderOneDrinks) : renderNotFound()
+    })
+}
+
+inputBarForm.addEventListener("submit", handleSearchSubmit)
