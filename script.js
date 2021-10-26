@@ -42,7 +42,7 @@ function renderOneDrinks(drinkObj) {
     barName.innerText = drinkObj.bar
     comments.innerText = drinkObj.comment
     
-    drinkCardDiv.append(drinkName, drinkStrength, barImage, barName, comments)
+    drinkCardDiv.append(barName, barImage, drinkName, drinkStrength, comments)
     searchResults.appendChild(drinkCardDiv)
     
     inputBarForm.reset() 
