@@ -3,33 +3,31 @@ const inputBarForm = document.querySelector("#search-drinks")
 const selectBoroughBar = document.querySelector("#borough-dropdown")
 const selectStrengthBar = document.querySelector("#drink-strength")
 
+// before we merge to avoid conflicts do the following:
 
+/*
+    the first four selectors, make sure that it is the same on Dominick and tiffany's latest push
+*/
 
 
 function renderNotFound() {
-
     searchResults.replaceChildren()
-
 
     const div = document.createElement('div')
     const message = document.createElement('h3')
     const icon = document.createElement('h1')
 
     icon.textContent = '😢'
-    message.textContent = 'sorry, we don\'t quite have that drink yet. check back next time!'
+    message.textContent = 'Sorry, we don\'t quite have that drink yet. check back next time!'
 
     div.append(icon, message)
-
     searchResults.appendChild(div)
 
     inputBarForm.reset()
-
 }
 
 
-function renderOneDrinks(drinkObj) {
-
-    
+function renderOneDrinks(drinkObj) {   
     const drinkCardDiv = document.createElement('div')
     drinkCardDiv.className = "drink-card"
     const drinkName = document.createElement('h2')
@@ -45,10 +43,7 @@ function renderOneDrinks(drinkObj) {
     comments.innerText = drinkObj.comment
     
     drinkCardDiv.append(drinkName, drinkStrength, barImage, barName, comments)
-    
     searchResults.appendChild(drinkCardDiv)
-    
-    
     
     inputBarForm.reset() 
 }
