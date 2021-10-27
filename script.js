@@ -2,6 +2,57 @@ const searchResults = document.querySelector(".result-container")
 const inputBarForm = document.querySelector("#search-drinks")
 const selectBoroughBar = document.querySelector("#borough-dropdown")
 const selectStrengthBar = document.querySelector("#drink-strength")
+let resultOfBorough, resultOfStrength;
+
+
+// filter strength
+selectStrengthBar.addEventListener('change',() => {
+    fetch("http://localhost:3000/drinks")
+    .then(resp => resp.json())
+    .then(drinks => {
+    // function filtering(drinkObj) 
+
+
+        resultOfStrength = drinks.filter( function (drinkObj) {
+            // console.log(selectBoroughBar.value)
+          
+            return drinkObj.strength === selectStrengthBar.value;
+            
+        })
+        // .map(drinkObj =>{
+
+        //     return drinkObj.bar
+        // })
+        
+        console.log(resultOfStrength)
+    }) 
+})
+
+//----Filter Location
+selectBoroughBar.addEventListener('change',() => {
+    fetch("http://localhost:3000/drinks")
+    .then(resp => resp.json())
+    .then(drinks => {
+    // function filtering(drinkObj) 
+
+
+        resultOfBorough = drinks.filter( function (drinkObj) {
+            // console.log(selectBoroughBar.value)
+          
+            return drinkObj.location === selectBoroughBar.value;
+            
+        })
+        // .map(drinkObj =>{
+
+        //     return drinkObj.bar
+        // })
+        
+        console.log(resultOfBorough)
+    }) 
+})
+
+
+    
 
 // before we merge to avoid conflicts do the following:
 
