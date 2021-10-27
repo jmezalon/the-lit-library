@@ -3,56 +3,113 @@
         {
             "id": 1,
             "bar": "The 13th Step",
-            "drink": "example drink 3",
+            "drink": "Beer",
             "location": "Manhattan",
             "strength": "medium",
-            "image": "https://s3-media0.fl.yelpcdn.com/bphoto/gT_i9cpnPkKxaTCfuv-RHg/o.jpg",
+            "image": "https://lh3.googleusercontent.com/proxy/slw1upCQYVB64XHp0ikF_nIupmD0Qu-6lVIBpAijjJJtEwnotbcwiofViUjPnJtXJtkypI5PhL0IpeEv3a-d2IpDrJZkrFBP0w",
             "comment": "order this: beer - 5 for 20"
         },
         {
             "id": 2,
             "bar": "Carmelo's",
-            "drink": "example drink 2",
+            "drink": "Shots and beer",
             "location": "Brooklyn",
             "strength": "strong",
-            "image":"https://s3-media0.fl.yelpcdn.com/bphoto/c4-X6jHwXdP--k0UP7_2CA/o.jpg",
+            "image":"https://64.media.tumblr.com/f4611eb4dac52bb69f74e6c995e8a0a8/tumblr_pwpkk1AmKI1u3zgyoo3_1280.jpg",
             "comment": "order this: shots and beer - $4"
         },
         {
             "id": 3,
             "bar": "Dominie's Hoek",
-            "drink": "example drink",
+            "drink": "Beer, Sangria & well drinks",
             "location": "Queens",
             "strength": "medium",
-            "image": "https://whereyoueat.com/r_gallery_images/rgallery-17278/0001-BG.jpg",
-            "comment":"order this: beer and shots specials"
+            "image": "https://s3-media0.fl.yelpcdn.com/bphoto/0vylRMVCzHuQIDgp4Hl41w/l.jpg",
+            "comment":"Although they do not have this deal on the regular, their happy hour is definitely something that makes them a potential candidate!"
         },
         {
             "id": 4,
-            "bar": "The new bar",
-            "drink": "example drink 2",
-            "location": "Manhattan",
+            "bar": "Twins Lounge",
+            "drink": "Beer and shot",
+            "location": "Brooklyn",
             "strength": "medium",
-            "image": "https://images.squarespace-cdn.com/content/v1/59acf2a1ff7c503cffe90bfb/1557414606790-ZDZLDIBRS4OPN6DL5112/pm_40826521763_o.jpg?format=1000w",
-            "comment": "order this: beer - 5 for 20"
+            "image": "https://i2.wp.com/greenpointers.com/app/uploads/2021/04/FullSizeRender.jpeg?fit=1200%2C900&ssl=1",
+            "comment": "They have a great variety of great prices on their drinks, like their $4 dollar Bud can but their $7 dollar beer & shot is top!"
         },
         {
             "id": 5,
-            "bar": "Dominick's",
-            "drink": "example drink 2",
-            "location": "Brooklyn",
+            "bar": "Art Bar",
+            "drink": "Draft beers, House wines, Well drinks",
+            "location": "Manhattan",
             "strength": "strong",
-            "image":"https://www.worldsbestbars.com/wp-content/uploads/2020/04/no-cocktail-bar-tokyo-004.jpeg",
-            "comment": "order this: shots and beer - $4"
+            "image":"https://media-cdn.tripadvisor.com/media/photo-s/18/35/fa/ec/art-loung-area.jpg",
+            "comment": "In general they are wallet friendly but their happy hour is undeniably eco-friendly. $5 beers, wines and liquors!"
         },
         {
+            
             "id": 6,
-            "bar": "Leo's Hoek",
-            "drink": "example drink 3",
+            "bar": "Post No Bills",
+            "drink": "Beers & Cocktails",
             "location": "Queens",
             "strength": "medium",
+            "image": "https://images.squarespace-cdn.com/content/v1/51926129e4b09d043dd27fcb/1532653366823-58X830J5PUHT49UIH52I/IMG_0774.JPG?format=1000w",
+            "comment":"They have canned and bottled beers that start at $3, like their 'Rolling Rock' and for the Cocktail lovers you have a large variety for $9!"
+        },
+        {
+            "id": 7,
+            "bar": "The Prospect Bar & Grill",
+            "drink": "Beers & Shots",
+            "location": "Brooklyn",
+            "strength": "medium",
+            "image": "https://cdn.vox-cdn.com/thumbor/VkR6Dgqjp4j_KSSyVjBKq9tQj1A=/0x0:960x640/1200x800/filters:focal(230x319:382x471)/cdn.vox-cdn.com/uploads/chorus_image/image/59577409/The_Prospect_DC_bar.0.jpg",
+            "comment":"This place has great prices when it comes to beers, they start from $6 (Miller High Life 12 oz btl) and if you need an extra umf on that you can get a shot and beer for $9! (Miller Hih Life & a shot of Evan Williams)"
+        },
+        {
+            "id": 8,
+            "bar": "Yankee Tavern",
+            "drink": "Hard Alcohol",
+            "location": "Bronx",
+            "strength": "medium",
+            "image": "https://s3-media0.fl.yelpcdn.com/bphoto/Vu_hnB9hQsQAuiHSzQUyJQ/348s.jpg",
+            "comment":"This Bar is definitely better for their cocktails because of their prices, $7-$9!"
+        },
+        {
+            "id": 9,
+            "bar": "Tina's Whiskey Tavern",
+            "drink": "Beers",
+            "location": "Staten Island",
+            "strength": "light",
             "image": "https://whereyoueat.com/r_gallery_images/rgallery-17278/0001-BG.jpg",
-            "comment":"order this: beer and shots specials"
+            "comment":"Draft beers for $4-$5! "
+        },
+        {
+            "id": 10,
+            "bar": "Le roil Lounge",
+            "drink": "Beers",
+            "location": "Staten Island",
+            "strength": "light",
+            "image": "https://pbs.twimg.com/profile_images/1182763061213569025/UurSD1Pn_400x400.jpg",
+            "comment":"Beers for $5!"
+        },
+        {
+            "id": 11,
+            "bar": "1020 Bar",
+            "drink": "Beers",
+            "location": "Manhattan",
+            "strength": "light",
+            "image": "https://s3-media0.fl.yelpcdn.com/bphoto/zC7PQJBlQhInQvuIav6lLg/o.jpg",
+            "comment":"Draft beers for $4-$6! "
+        },
+        {
+            "id": 12,
+            "bar": "Boopie Trap",
+            "drink": "liqour",
+            "location": "Brooklyn",
+            "strength": "Medium",
+            "image": "https://s3-media0.fl.yelpcdn.com/bphoto/yAR-ZoHYP5p6s4xjGHOMOg/o.jpg",
+            "comment":"You can get a vodka bottle for $20! "
         }
     ]
 }
+
+
