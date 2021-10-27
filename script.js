@@ -35,7 +35,7 @@ selectBoroughBar.addEventListener('change',() => {
     .then(drinks => {
     // function filtering(drinkObj) 
 
-
+//hi
         resultOfBorough = drinks.filter( function (drinkObj) {
             // console.log(selectBoroughBar.value)
           
