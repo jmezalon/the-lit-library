@@ -4,43 +4,6 @@ const selectBoroughBar = document.querySelector("#borough-dropdown")
 const selectStrengthBar = document.querySelector("#drink-strength")
 let resultOfBorough, resultOfStrength;
 
-// firstFormBar.addEventListener("submit", (e) => {
-//     e.preventDefault()
-//     const userInput= firstFormBar.querySelector("#search-for-drinks").value
-//     //console.log(userInput)
-//     fetch("http://localhost:3000/drinks")
-//     .then(resp => resp.json())
-//     .then(drinks => drinks.forEach(drinkObj => {
-//         const resultName = document.createElement('h3')
-//         const resultImage = document.createElement('img')
-//         const resultDrink = document.createElement('p')
-//         const resultStrength = document.createElement('p')
-//         resultName.innerText = drinkObj.bar
-//         resultImage.src = drinkObj.image
-//         resultDrink.innerText = drinkObj.drink
-//         resultStrength.innerText = drinkObj.strength
-//         addSearchResults.append(resultImage, resultName, resultDrink, resultStrength)
-//     })
-//     )
-
-// //fetch json data
-// fetch("http://localhost:3000/drinks")
-//     .then(resp => resp.json())
-//     .then(drinks => drinks.forEach(drinkObj => {
-//         changeStrengthDetail(drinkObj)
-//     }))
-
-// //create change event   
-// function changeStrengthDetail(drinkObj) {
-//     selectStrengthBar.addEventListener("change", () => {
-// //detail change event using filter()
-//     const newDrinkresults = {
-//         resultStrength.filter(drinkObj => drinkObj.strength === selectStrengthBar)
-
-// return newDrinkresults.replace(addSearchResults)
-// })
-// }
-// console.log(newDrinkresults)
 
 // filter strength
 selectStrengthBar.addEventListener('change',() => {
@@ -89,5 +52,67 @@ selectBoroughBar.addEventListener('change',() => {
 })
 
 
+    
+
+// before we merge to avoid conflicts do the following:
+
+/*
+    the first four selectors, make sure that it is the same on Dominick and tiffany's latest push
+*/
+
+
+function renderNotFound() {
+    searchResults.replaceChildren()
+
+    const div = document.createElement('div')
+    const message = document.createElement('h3')
+    const icon = document.createElement('h1')
+
+    icon.textContent = '😢'
+    message.textContent = 'Sorry, we don\'t quite have that drink yet. check back next time!'
+
+    div.append(icon, message)
+    searchResults.appendChild(div)
+
+    inputBarForm.reset()
+}
+
+
+function renderOneDrinks(drinkObj) {   
+    const drinkCardDiv = document.createElement('div')
+    drinkCardDiv.className = "drink-card"
+    const drinkName = document.createElement('h2')
+    const drinkStrength = document.createElement('p')
+    const barImage = document.createElement('img')
+    const barName = document.createElement('h3')
+    const comments = document.createElement('p')
+    
+    drinkName.innerText = drinkObj.drink
+    drinkStrength.innerText = drinkObj.strength
+    barImage.src = drinkObj.image
+    barName.innerText = drinkObj.bar
+    comments.innerText = drinkObj.comment
+    
+    drinkCardDiv.append(barName, barImage, drinkName, drinkStrength, comments)
+    searchResults.appendChild(drinkCardDiv)
+    
+    inputBarForm.reset() 
+}
+    
+
+function handleSearchSubmit(e) {
+    e.preventDefault()
+    const userInput= inputBarForm.querySelector("#search-for-drinks").value
+    
+    fetch("http://localhost:3000/drinks")
+    .then(resp => resp.json())
+    .catch(err => console.log("err: ", err.message))
+    .then(drinks => {
+        searchResults.replaceChildren()
+        let filteredDrinks = drinks.filter(drinkObj => drinkObj.drink.toLowerCase() === userInput.toLowerCase())
         
-  
+        filteredDrinks.length !== 0 ? filteredDrinks.map(renderOneDrinks) : renderNotFound()
+    })
+}
+
+inputBarForm.addEventListener("submit", handleSearchSubmit)
