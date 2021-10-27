@@ -4,63 +4,9 @@ const selectBoroughBar = document.querySelector("#borough-dropdown")
 const selectStrengthBar = document.querySelector("#drink-strength")
 let resultOfBorough, resultOfStrength;
 
-
-// filter strength
-selectStrengthBar.addEventListener('change',() => {
-    fetch("http://localhost:3000/drinks")
-    .then(resp => resp.json())
-    .then(drinks => {
-    // function filtering(drinkObj) 
-
-
-        resultOfStrength = drinks.filter( function (drinkObj) {
-            // console.log(selectBoroughBar.value)
-          
-            return drinkObj.strength === selectStrengthBar.value;
-            
-        })
-        // .map(drinkObj =>{
-
-        //     return drinkObj.bar
-        // })
-        
-        console.log(resultOfStrength)
-    }) 
-})
-
-//----Filter Location
-selectBoroughBar.addEventListener('change',() => {
-    fetch("http://localhost:3000/drinks")
-    .then(resp => resp.json())
-    .then(drinks => {
-    // function filtering(drinkObj) 
-
-//hi
-        resultOfBorough = drinks.filter( function (drinkObj) {
-            // console.log(selectBoroughBar.value)
-          
-            return drinkObj.location === selectBoroughBar.value;
-            
-        })
-        // .map(drinkObj =>{
-
-        //     return drinkObj.bar
-        // })
-        
-        console.log(resultOfBorough)
-    }) 
-})
-
-
     
 
-// before we merge to avoid conflicts do the following:
-
-/*
-    the first four selectors, make sure that it is the same on Dominick and tiffany's latest push
-*/
-
-
+// Jean's seciton
 function renderNotFound() {
     searchResults.replaceChildren()
 
@@ -76,7 +22,7 @@ function renderNotFound() {
 
     inputBarForm.reset()
 }
-// commiting
+
 
 function renderOneDrinks(drinkObj) {   
     const drinkCardDiv = document.createElement('div')
@@ -111,8 +57,46 @@ function handleSearchSubmit(e) {
         searchResults.replaceChildren()
         let filteredDrinks = drinks.filter(drinkObj => drinkObj.drink.toLowerCase() === userInput.toLowerCase())
         
-        filteredDrinks.length !== 0 ? filteredDrinks.map(renderOneDrinks) : renderNotFound()
+        { filteredDrinks.length !== 0 ? filteredDrinks.map(renderOneDrinks) : renderNotFound()  }
     })
 }
 
 inputBarForm.addEventListener("submit", handleSearchSubmit)
+
+
+// Tiffany's code
+
+// filter strength
+selectStrengthBar.addEventListener('change',() => {
+    fetch("http://localhost:3000/drinks")
+    .then(resp => resp.json())
+    .then(drinks => {
+
+        searchResults.replaceChildren()
+        resultOfStrength = drinks.filter( function (drinkObj) {          
+            return drinkObj.strength === selectStrengthBar.value;
+        })
+
+        { resultOfStrength.length !== 0 ? resultOfStrength.map(renderOneDrinks) : renderNotFound()  }
+    }) 
+})
+
+// Dominick's code
+
+//----Filter Location
+selectBoroughBar.addEventListener('change',() => {
+    fetch("http://localhost:3000/drinks")
+    .then(resp => resp.json())
+    .then(drinks => {
+
+       searchResults.replaceChildren()
+        resultOfBorough = drinks.filter( function (drinkObj) {
+          
+            return drinkObj.location === selectBoroughBar.value;
+            
+        })
+
+        { resultOfBorough.length !== 0 ? resultOfBorough.map(renderOneDrinks) : renderNotFound()  }
+    }) 
+})
+
