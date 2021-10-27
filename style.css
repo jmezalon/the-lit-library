@@ -2,6 +2,62 @@ body {
     background-image: linear-gradient(to right, rgb(198, 224, 235), rgb(115, 227, 235))
 }
 
+header {
+    text-align: center;
+    padding-top: 20px;
+    font-size: x-large;
+    padding-bottom: 50px;
+    animation: pulsate 2.5s infinite alternate;
+}
+
+@keyframes pulsate {
+  
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #00e699,
+        0 0 100px #00cc88,
+        0 0 150px #00b377;
+    }
+    0% {
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 20px #0fa,
+      0 0 45px #0fa,
+      0 0 55px #0fa,
+      0 0 70px #0fa,
+      0 0 100px #0fa;
+    }
+}
+
+#search-container {
+    /* border: dotted red; */
+    text-align: left;
+    padding-left: 250px;
+
+    /* display: inline-block; */
+
+}
+
+.text-search-bar {
+    font: bold;
+}
+#borough-search {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+#strength-search {
+    padding-bottom: 50px;
+}
+
 img {
     width: 390px;
     height: 450px;
@@ -25,6 +81,12 @@ img {
     justify-content: stretch;
     flex-wrap: wrap;
 }
+
+
+.text-search-bar  {
+    font-weight: bold;
+}
+
 
 #filter-warning {
     color: red;

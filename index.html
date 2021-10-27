@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+<!-- //hello -->
 <body>
     <div class="container">
         <header>
@@ -15,12 +16,13 @@
         </header>
         <div id="search-container">
             <form id="search-drinks" method="GET" action="/localhost:3000">
-                <label for="search-bar">I want to drink</label>
-                <input type="text" name="search bar" id="search-for-drinks" placeholder="drinks">
+                <span class="text-search-bar">I want to drink</span>
+                <input type="text" name="search bar" id="search-for-drinks" placeholder="Type of drink">
                 <label for="submit"></label>
                 <input type="submit" name="submit" id="submit-buttom">
             </form>
-            <label for="select-borough">Filter Borough: </label>
+            <div id= "borough-search">
+            <span class="text-search-bar">Filter Borough: </span>
                 <select id="borough-dropdown" name="select-borough">
                     <option value="" disabled>choose</option>
                     <option value="Brooklyn">Brooklyn</option>
@@ -29,14 +31,17 @@
                     <option value="Queens">Queens</option>
                     <option value="Staten-Island">Staten-Island</option>
                 </select>
-                
-            <label for="select-drink-strength">Filter Strength: </label>
+            </div>
+            
+            <div id= "strength-search">
+                <span class="text-search-bar">Filter Strength: </label>
                 <select id="drink-strength" name="select-strength">
                     <option value="" disabled>choose</option>
                     <option value="strong">Strong</option>
                     <option value="medium">Medium</option>
                     <option value="light">Light</option>
-            </select>
+                </select>
+            </div>
         </div>
         <div class="result-container">
             <div id="landing-page-card">
