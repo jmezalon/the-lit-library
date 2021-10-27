@@ -24,6 +24,7 @@
             <div id= "borough-search">
             <span class="text-search-bar">Filter Borough: </span>
                 <select id="borough-dropdown" name="select-borough">
+                    <option value="" disabled>choose</option>
                     <option value="Brooklyn">Brooklyn</option>
                     <option value="Bronx">Bronx</option>
                     <option value="Manhattan">Manhattan</option>
@@ -35,6 +36,7 @@
             <div id= "strength-search">
                 <span class="text-search-bar">Filter Strength: </label>
                 <select id="drink-strength" name="select-strength">
+                    <option value="" disabled>choose</option>
                     <option value="strong">Strong</option>
                     <option value="medium">Medium</option>
                     <option value="light">Light</option>
@@ -42,7 +44,10 @@
             </div>
         </div>
         <div class="result-container">
-            <p>our result will be here</p>
+            <div id="landing-page-card">
+                <h3>Hey, welcome to our Library of Drinks. We have a wide variety of options from strong drinks to light. <br>Start searching to find a drink of your liking!</h3>
+                <p id="filter-warning">**Our filters work indepandently, one at the time!**</p>
+            </div>
         </div>
     </div>  
 </body>

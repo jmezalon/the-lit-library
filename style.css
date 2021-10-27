@@ -82,7 +82,24 @@ img {
     flex-wrap: wrap;
 }
 
+
 .text-search-bar  {
     font-weight: bold;
 }
 
+
+#filter-warning {
+    color: red;
+    font-style: oblique;
+}
+
+#landing-page-card {
+    background: white;
+    margin-top: 50px;
+    width: 800px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 50%;
+    position: relative;
+    left: -350px;
+}

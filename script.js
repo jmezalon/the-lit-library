@@ -1,5 +1,6 @@
 const searchResults = document.querySelector(".result-container")
 const inputBarForm = document.querySelector("#search-drinks")
+inputBarForm.required = true;
 const selectBoroughBar = document.querySelector("#borough-dropdown")
 const selectStrengthBar = document.querySelector("#drink-strength")
 let resultOfBorough, resultOfStrength;
@@ -48,16 +49,31 @@ function renderOneDrinks(drinkObj) {
 
 function handleSearchSubmit(e) {
     e.preventDefault()
+
     const userInput= inputBarForm.querySelector("#search-for-drinks").value
+    const noInput = document.createElement('span')
+    noInput.textContent = "**add an input**"
+    noInput.style.color = 'red'
     
+    userInput !== "" ? searchResults.replaceChildren() : null
+
     fetch("http://localhost:3000/drinks")
     .then(resp => resp.json())
     .catch(err => console.log("err: ", err.message))
     .then(drinks => {
-        searchResults.replaceChildren()
+
+        if (!userInput && inputBarForm.lastElementChild.type === "submit") {  
+            inputBarForm.appendChild(noInput)
+        } else if (userInput && inputBarForm.lastElementChild.type !== "submit") {
+            inputBarForm.removeChild(inputBarForm.lastElementChild)
+            searchResults.replaceChildren()
+        } 
+        
         let filteredDrinks = drinks.filter(drinkObj => drinkObj.drink.toLowerCase() === userInput.toLowerCase())
         
-        { filteredDrinks.length !== 0 ? filteredDrinks.map(renderOneDrinks) : renderNotFound()  }
+        if (userInput) {
+            { filteredDrinks.length !== 0 ? filteredDrinks.map(renderOneDrinks) : renderNotFound()  }
+        } 
     })
 }
 
