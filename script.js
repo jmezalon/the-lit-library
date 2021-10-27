@@ -76,7 +76,7 @@ function renderNotFound() {
 
     inputBarForm.reset()
 }
-
+// commiting
 
 function renderOneDrinks(drinkObj) {   
     const drinkCardDiv = document.createElement('div')
