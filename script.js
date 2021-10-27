@@ -12,6 +12,7 @@ function renderNotFound() {
     searchResults.replaceChildren()
 
     const div = document.createElement('div')
+    div.id = "sorry-message"
     const message = document.createElement('h3')
     const icon = document.createElement('h1')
 
