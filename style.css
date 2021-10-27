@@ -19,9 +19,9 @@ header {
         0 0 19px #fff,
         0 0 40px #0fa,
         0 0 80px #0fa,
-        0 0 90px #0fa,
-        0 0 100px #0fa,
-        0 0 150px #0fa;
+        0 0 90px #00e699,
+        0 0 100px #00cc88,
+        0 0 150px #00b377;
     }
     0% {
       text-shadow:
@@ -45,6 +45,9 @@ header {
 
 }
 
+.text-search-bar {
+    font: bold;
+}
 #borough-search {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -78,3 +81,8 @@ img {
     justify-content: stretch;
     flex-wrap: wrap;
 }
+
+.text-search-bar  {
+    font-weight: bold;
+}
+

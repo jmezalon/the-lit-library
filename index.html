@@ -15,13 +15,13 @@
         </header>
         <div id="search-container">
             <form id="search-drinks" method="GET" action="/localhost:3000">
-                <label for="search-bar">I want to drink</label>
+                <span class="text-search-bar">I want to drink</span>
                 <input type="text" name="search bar" id="search-for-drinks" placeholder="Type of drink">
                 <label for="submit"></label>
                 <input type="submit" name="submit" id="submit-buttom">
             </form>
-            <div id= "borough-search" 
-            <label for="select-borough">Filter Borough: </label>
+            <div id= "borough-search">
+            <span class="text-search-bar">Filter Borough: </span>
                 <select id="borough-dropdown" name="select-borough">
                     <option value="Brooklyn">Brooklyn</option>
                     <option value="Bronx">Bronx</option>
@@ -31,8 +31,8 @@
                 </select>
             </div>
             
-            <div id= "strength-search"
-            <label for="select-drink-strength">Filter Strength: </label>
+            <div id= "strength-search">
+                <span class="text-search-bar">Filter Strength: </label>
                 <select id="drink-strength" name="select-strength">
                     <option value="strong">Strong</option>
                     <option value="medium">Medium</option>
