@@ -1,7 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fugaz+One&family=IM+Fell+English+SC&family=Irish+Grover&display=swap');
+
 body {
     background-image: linear-gradient(to right, rgb(198, 224, 235), rgb(115, 227, 235))
 }
-
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 header {
     text-align: center;
     padding-top: 20px;
@@ -39,7 +46,7 @@ header {
 #search-container {
     /* border: dotted red; */
     text-align: left;
-    padding-left: 250px;
+    /* padding-left: 0px; */
 
     /* display: inline-block; */
 
@@ -51,7 +58,7 @@ header {
 #borough-search {
     padding-top: 20px;
     padding-bottom: 20px;
-
+    text-align: ;
 }
 
 #strength-search {
@@ -113,5 +120,27 @@ img {
     padding: 20px;
 }
 
-/* <!--Media Queries--> */
-@media ()
+
+p {
+    font-family: 'Irish Grover', cursive;
+}
+
+h3{
+    font-family: 'Architects Daughter', cursive;
+}
+
+h1{
+    font-family: 'Fugaz One', cursive;
+}
+
+#search-for-drinks, #borough-dropdown, #drink-strength, #submit-buttom{
+    border-radius: 10px;
+}
+
+span, #welcome-message, #filter-warning{
+    font-family: 'IM Fell English SC', serif;
+}
+#filter-warning{
+    font-weight:bold
+}
+
