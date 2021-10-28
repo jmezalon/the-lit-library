@@ -19,5 +19,5 @@ Once we get the return results we are then displaying them on cards that we crea
 
 ### How to obtain this code
 
-To use this code, add or extract a part of it you can use github. First you must go on the github website and navigate to where our code is located(-------insert url here). Once you are there, you can copy the SSH key, go into your terminal, find the directory where you would like to place it in and use the commands: git clone …@github.com, cd into the file and code. For any questions you can just reach out to us or email us at tamtiffany89@gmail.com. 
+To use this code, add or extract a part of it you can use github. Once you are there, fork this repository and copy the SSH key. Then, go into your terminal, find the directory where you would like to place it in and use the commands: git clone <paste SSH link here>, cd into the file and code. For any questions you can just reach out to us or email us at tamtiffany89@gmail.com. 
 
